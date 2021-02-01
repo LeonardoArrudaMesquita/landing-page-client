@@ -6,10 +6,11 @@ import ProfileCard from 'components/ProfileCard'
 
 import content from './content'
 import * as S from './styles'
+import { SectionAboutUsProps } from 'types/api'
 
-const SectionAboutUs = () => (
+const SectionAboutUs = ({ title }: SectionAboutUsProps) => (
   <Container>
-    <Heading reverseColor>Quem somos nós?</Heading>
+    <Heading reverseColor>{title}</Heading>
 
     <S.Content>
       {content.map((profile) => (
